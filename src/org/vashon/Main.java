@@ -63,7 +63,7 @@ public class Main {
                 System.out.println("You lost, I swear it's not rigged!");
             } else if (userChoice.equals("scissors") && randomElement.equals("rock")) {
                 System.out.println("You lost");
-            } else if(!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")) {
+            } else if(!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors") && !userChoice.equals("troll")) {
                 System.out.println("That's not rock, paper or scissors! So I guess you lost. (Hint: The Choices are CASE SENSITIVE.)");
             } else if (userChoice.equals("troll")) {
                 System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
