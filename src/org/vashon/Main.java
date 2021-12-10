@@ -7,6 +7,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
+        //declares options that we use for comparisions.
         ArrayList<String> rpc = new ArrayList<String>();
         rpc.add("rock");
         rpc.add("paper");
@@ -25,6 +26,7 @@ public class Main {
                 "░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝\n" +
                 "TO ROCK PAPER SCISSORS! YOUR CHOICES ARE rock, paper AND scissors";
         int i;
+        //animates the welcome text
         for(i = 0; i < text.length(); i++){
             System.out.printf("%c", text.charAt(i));
             try{
@@ -36,19 +38,18 @@ public class Main {
 
 
 
-
+        //loop for playing again
         boolean stop = false;
         while(!stop) {
             System.out.println(" \n Type your choice here:");
             Random rand = new Random();
             String randomElement = rpc.get(rand.nextInt(rpc.size()));
 
-            /////HERE!!!
-            System.out.println(" ");
             String userChoice = scan.nextLine();
             System.out.println("You chose " + userChoice);
             System.out.println("We chose " + randomElement);
 
+            //all possible user input options
             if (userChoice.equals(randomElement)) {
                 System.out.println("It's a tie!");
             } else if (userChoice.equals("rock") && randomElement.equals("scissors")) {
@@ -65,7 +66,9 @@ public class Main {
                 System.out.println("You lost");
             } else if(!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors") && !userChoice.equals("troll")) {
                 System.out.println("That's not rock, paper or scissors! So I guess you lost. (Hint: The Choices are CASE SENSITIVE.)");
-            } else if (userChoice.equals("troll")) {
+            }
+            //fun easter egg when you type troll
+            else if (userChoice.equals("troll")) {
                 System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⠟⠛⠛⠛⠛⠛⣛⣻⣿⣿⣿⣿⣿⣟⣛⣛⣛⠛⠒⠲⠶⠦⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠏⠁⠀⠀⢀⣤⠶⣛⣩⣥⠤⠤⠤⠤⢤⣤⣤⣭⣭⣉⣉⣛⣛⣻⣭⣥⠬⡍⠛⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀\n" +
@@ -91,14 +94,13 @@ public class Main {
                         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀");
                 System.out.println("TROLL!!!!!");
             }
-
+            //play again
             System.out.println("Would you like to play again? (y/n)");
             String s = scan.nextLine();
             if(s.equals("n")) {
                 stop = true;
             }
         }
-
 
 
     }
